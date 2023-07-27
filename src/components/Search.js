@@ -24,7 +24,7 @@ const Search = () => {
       const obtainedArray = resData.items;
       for (const query of obtainedArray) {
         const queryLink = query.link;
-        const scrapedRes = await fetch(`${process.env.BACKEND_URL}?link=${queryLink}`);
+        const scrapedRes = await fetch(`https://wild-red-kingfisher-wig.cyclic.app/?link=${queryLink}`);
         const resultsJson = await scrapedRes.json();
 
         if (!scrapedRes.ok) {
