@@ -54,7 +54,7 @@ const Search = () => {
         <div className={styled.btnOfLinks}>
           <NavLink className={({ isActive }) =>
             isActive ? styled.active_cls : styled.eachLink
-          } to="one" data={arr[0]}>Content 1</NavLink>
+          } to="/" data={arr[0]}>Content 1</NavLink>
           <NavLink className={({ isActive }) =>
             isActive ? styled.active_cls : styled.eachLink
           } to="two" data={arr[1]}>Content 2</NavLink>

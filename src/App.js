@@ -23,7 +23,7 @@ function App() {
 
       children:[
         {
-          path: "one",
+          path: "/",
           element: <One disData={arrayRes[0]} urlData={arrayOfUrl[0]} />
         },
         {
