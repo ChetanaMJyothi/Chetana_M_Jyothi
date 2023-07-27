@@ -77,3 +77,8 @@ a.active {
     top: 2px;
     left:2px;
 }
+
+.display_btn{
+display: flex;
+justify-content: center;
+}

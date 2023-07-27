@@ -10,7 +10,13 @@ const Search = () => {
   let urlArr = [];
   const queryRef = useRef();
   const dispatch = useDispatch()
-
+  const refreshHandler = (e) => {
+    e.preventDefault();
+    const userConfiremed = window.confirm("Your fetched data will be lost, are you sure you want to refresh this Page?")
+    if(userConfiremed){
+    window.location.reload();
+    }
+  }
   const onSubmitHandler = (e) => {
     e.preventDefault();
     setDisContent(true)
@@ -51,6 +57,9 @@ const Search = () => {
         <button className={styled.submit_btn}>Search</button>
       </form>
       {disContent && <div >
+        <div className={styled.display_btn}>
+        <button className={styled.submit_btn} onClick={refreshHandler}>Refresh</button>
+       </div>
         <div className={styled.btnOfLinks}>
           <NavLink className={({ isActive }) =>
             isActive ? styled.active_cls : styled.eachLink
