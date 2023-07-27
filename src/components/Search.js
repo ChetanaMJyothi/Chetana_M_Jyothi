@@ -6,15 +6,15 @@ import styled from './Search.module.css';
 
 const Search = () => {
   const [disContent, setDisContent] = useState(false);
-  let arr=[] ;
-  let urlArr=[] ;
+  let arr = [];
+  let urlArr = [];
   const queryRef = useRef();
   const dispatch = useDispatch()
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
     setDisContent(true)
-    
+
     e.preventDefault();
     async function fetchData() {
       const query = queryRef.current.value;
@@ -30,7 +30,7 @@ const Search = () => {
         if (!scrapedRes.ok) {
           throw new Error("failed to fetch");
         }
-        urlArr=[...urlArr, resultsJson.url];
+        urlArr = [...urlArr, resultsJson.url];
         arr = [...arr, resultsJson.res.substring(13)];
       }
       dispatch(copyArray(arr));
@@ -72,7 +72,7 @@ const Search = () => {
       </div>
       }
       <div className={styled.my_name}>
-      <small>Chetana M Jyothi</small>
+        <small>By: Chetana M Jyothi</small>
       </div>
     </div>
   )
